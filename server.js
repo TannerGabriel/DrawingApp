@@ -44,4 +44,16 @@ server.on('listening', () => {
     console.log('Listening on ' + bind)
 })
 
+
+// Web sockets
+var io = require('socket.io')(server);
+
+io.sockets.on('connection', (socket) => {
+    console.log("Client connected: " + socket.id);
+
+    socket.on('mouse', (data) => socket.broadcast.emit('mouse', data));
+
+    socket.on('disconnect', () => console.log("Client has disconnected"));
+});
+
 server.listen(port)

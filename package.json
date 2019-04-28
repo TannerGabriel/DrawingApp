@@ -9,6 +9,8 @@
   "author": "Gabriel Tanner",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
   }

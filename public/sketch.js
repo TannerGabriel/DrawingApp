@@ -10,9 +10,8 @@ function setup() {
     // Callback function
     socket.on('mouse', (data) => {
         console.log("Got: " + data.x + " " + data.y);
-        fill(0, 0, 255);
-        noStroke();
-        ellipse(data.x, data.y, 20, 20);
+        stroke(0, 0, 255);
+        line(data.x, data.y, data.px, data.py,)
     });
 }
 
@@ -20,19 +19,20 @@ function draw() {}
 
 function mouseDragged() {
     // Draw
-    fill(255);
-    noStroke();
-    ellipse(mouseX, mouseY, 20, 20);
-
+    stroke(255);
+    line(mouseX, mouseY, pmouseX, pmouseY)
+    
     // Send the mouse coordinates
-    sendmouse(mouseX, mouseY);
+    sendmouse(mouseX, mouseY, pmouseX, pmouseY)
 }
 
 // Sending data to the socket
-function sendmouse(x, y) {
+function sendmouse(x, y, pX, pY) {
     const data = {
         x: x,
-        y: y
+        y: y,
+        px: pX,
+        py: pY
     };
 
     socket.emit('mouse', data);

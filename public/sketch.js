@@ -13,6 +13,16 @@ function setup() {
         stroke(0, 0, 255);
         line(data.x, data.y, data.px, data.py,)
     });
+
+    const color_picker = select('#pickcolor')
+    const color_btn = select('#color-btn')
+    const color_holder = select('#color-holder')
+
+    color_btn.mousePressed((event) => {
+        const hexCode = color_picker.value()
+        color_holder.style('background-color', hexCode)
+    })
+
 }
 
 function draw() {}
@@ -37,3 +47,8 @@ function sendmouse(x, y, pX, pY) {
 
     socket.emit('mouse', data);
 }
+
+
+
+
+

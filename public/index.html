@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Websockets drawing app</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js">
@@ -14,6 +15,10 @@
 </head>
 
 <body>
+    <p>Choose color (# hex)</p>
+    <input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor" class="call-picker">
+    <div id="color-holder" class="color-holder call-picker"></div>
+    <button id="color-btn">Change color</button>
 </body>
 
 </html>

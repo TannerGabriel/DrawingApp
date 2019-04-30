@@ -1,4 +1,5 @@
 let socket;
+let color = '#FFF'
 
 function setup() {
     createCanvas(400, 400);
@@ -20,6 +21,8 @@ function setup() {
 
     color_btn.mousePressed((event) => {
         const hexCode = color_picker.value()
+        color = hexCode
+        console.log(color)
         color_holder.style('background-color', hexCode)
     })
 
@@ -29,7 +32,7 @@ function draw() {}
 
 function mouseDragged() {
     // Draw
-    stroke(255);
+    stroke(color);
     line(mouseX, mouseY, pmouseX, pmouseY)
     
     // Send the mouse coordinates
@@ -42,7 +45,7 @@ function sendmouse(x, y, pX, pY) {
         x: x,
         y: y,
         px: pX,
-        py: pY
+        py: pY,
     };
 
     socket.emit('mouse', data);

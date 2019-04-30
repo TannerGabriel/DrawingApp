@@ -11,7 +11,7 @@ function setup() {
     // Callback function
     socket.on('mouse', (data) => {
         console.log("Got: " + data.x + " " + data.y);
-        stroke(0, 0, 255);
+        stroke(data.color);
         line(data.x, data.y, data.px, data.py,)
     });
 
@@ -20,10 +20,8 @@ function setup() {
     const color_holder = select('#color-holder')
 
     color_btn.mousePressed((event) => {
-        const hexCode = color_picker.value()
-        color = hexCode
-        console.log(color)
-        color_holder.style('background-color', hexCode)
+        color = color_picker.value()
+        color_holder.style('background-color', color)
     })
 
 }
@@ -46,6 +44,7 @@ function sendmouse(x, y, pX, pY) {
         y: y,
         px: pX,
         py: pY,
+        color: color
     };
 
     socket.emit('mouse', data);

@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Websockets drawing app</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js">
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js">
-    </script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.socket.io/socket.io-1.4.5.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"
+    ></script>
     <script type="text/javascript" src="sketch.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <p>Choose color (# hex)</p>
-    <input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor" class="call-picker">
+    <input
+      type="text"
+      name="custom_color"
+      placeholder="#FFFFFF"
+      id="pickcolor"
+      class="call-picker"
+    />
     <div id="color-holder" class="color-holder call-picker"></div>
     <button id="color-btn">Change color</button>
-</body>
-
+    <br />
+    <p>Choose stroke width</p>
+    <input
+      type="text"
+      name="stroke_width"
+      placeholder="1"
+      id="stroke-width-picker"
+      class="stroke_width_picker"
+    />
+    <button id="stroke-btn">Change stroke width</button>
+  </body>
 </html>

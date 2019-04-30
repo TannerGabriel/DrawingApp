@@ -1,5 +1,5 @@
 {
-  "name": "socketiodrawing",
+  "name": "socketio-drawing",
   "version": "1.0.0",
   "description": "A realtime drawing app using socketIO",
   "main": "server.js",
@@ -8,6 +8,12 @@
   },
   "author": "Gabriel Tanner",
   "license": "MIT",
+  "keywords": [
+    "socket io",
+    "drawing",
+    "javascript",
+    "sockets"
+  ],
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

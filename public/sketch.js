@@ -25,12 +25,15 @@ function setup() {
     const stroke_btn = select('#stroke-btn')
 
     color_btn.mousePressed(event => {
-        color = color_picker.value()
-        color_holder.style('background-color', color)
+        if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color_picker.value())) {
+            color = color_picker.value()
+            color_holder.style('background-color', color)
+        } else console.log('Enter a valid hex value')
     })
 
     stroke_btn.mousePressed(event => {
-        strokeWidth = parseInt(stroke_width_picker.value())
+        const width = parseInt(stroke_width_picker.value())
+        if (width > 0) strokeWidth = width
     })
 }
 

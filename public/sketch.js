@@ -1,5 +1,5 @@
 let socket
-let color = '#FFF'
+let color = '#000'
 let strokeWidth = 4
 let cv
 
@@ -7,7 +7,7 @@ function setup() {
 	// Creating canvas
 	cv = createCanvas(windowWidth / 2, windowHeight / 2)
 	centerCanvas()
-	cv.background(0)
+	cv.background(255, 255, 255)
 
 	// Start the socket connection
 	socket = io.connect('http://localhost:3000')

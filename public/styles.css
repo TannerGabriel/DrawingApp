@@ -45,6 +45,7 @@ input.stroke_width_picker {
 p {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: #DDD;
 }
 
 button {
@@ -53,4 +54,5 @@ button {
 
 html, body {
   height: 100%;
+  background-color: #373d55;
 }

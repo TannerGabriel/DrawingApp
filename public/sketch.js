@@ -33,8 +33,9 @@ function setup() {
 		if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color_picker.value())) {
 			color = color_picker.value()
 			color_holder.style('background-color', color)
+		} else {
+			console.log('Enter a valid hex value')
 		}
-		else {console.log('Enter a valid hex value')}
 	})
 
 	// Adding a mousePressed listener to the button
